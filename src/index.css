@@ -14,8 +14,9 @@ code {
 .App {
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: space-between;
+  align-items: center;
   margin: 20px 0;
 }
 
@@ -49,4 +50,12 @@ code {
   color: #666666;
   font-size: 14px;
   line-height: 1.8em;
+}
+
+.contactsWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80vw;
 }

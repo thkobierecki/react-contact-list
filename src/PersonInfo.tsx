@@ -1,15 +1,12 @@
-import React from "react";
+import { PersonInfoType } from 'src/types'
 
 type Props = {
-  data: {
-    firstNameLastName: string;
-    jobTitle: string;
-    emailAddress: string;
-  };
+  data: PersonInfoType;
+  handleSelectItem: (selectedContact: PersonInfoType) => void;
 };
 
 function PersonInfo(props: Props) {
-  const { data } = props;
+  const { data, handleSelectItem } = props;
   return (
     <div
       style={{
@@ -19,11 +16,13 @@ function PersonInfo(props: Props) {
         flexDirection: "column",
         padding: "32px",
         boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
-        margin: "10px 0",
+        margin: "10px 5px",
         background: "#fff",
         cursor: "pointer",
+        flex: 1
       }}
       className="person-info"
+      onClick={() => handleSelectItem(data)}
     >
       <div className="firstNameLastName">{data.firstNameLastName}</div>
       <div className="jobTitle">{data.jobTitle}</div>
