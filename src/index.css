@@ -26,10 +26,25 @@ code {
   font-weight: 700;
   margin: 10px 20px 0 0;
 }
+.person-info {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  background: #fff;
+  cursor: pointer;
+  flex: 1;
+}
+
+.selected-contact {
+  outline: 2px solid pink;
+}
 
 .person-info:hover {
-  padding: 30px;
-  border: 2px solid pink;
+  outline: 2px solid pink;
 }
 
 .firstNameLastName {
@@ -58,4 +73,25 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 80vw;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #ec6253;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: pointer;
+  opacity: 0.7;
 }
