@@ -4,3 +4,8 @@ export type PersonInfoType = {
   emailAddress: string;
   id: string;
 }
+
+export type ContactsResponseType = {
+  contactsList: PersonInfoType[];
+  hasNextPage: boolean;
+}
